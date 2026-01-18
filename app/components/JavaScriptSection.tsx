@@ -190,12 +190,11 @@ export default function JavaScriptSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3 justify-center">
-            Example Performance Impacts
-          </h3>
-
           {/* Container with background and padding */}
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10 max-w-6xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3 justify-center">
+              Example Performance Impacts
+            </h3>
             <div className="grid md:grid-cols-3 gap-8">
               {performanceMetrics.map((metric, idx) => (
                 <motion.div
