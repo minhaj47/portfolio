@@ -2,7 +2,7 @@
 
 ## What Was Wrong
 
-Next.js with `output: 'export'` and `basePath` configuration doesn't automatically prepend the basePath to image `src` attributes in the HTML. 
+Next.js with `output: 'export'` and `basePath` configuration doesn't automatically prepend the basePath to image `src` attributes in the HTML.
 
 **Before:** `<img src="/profile.jpg">`  
 **After:** `<img src="/portfolio/profile.jpg">` ✅
@@ -15,8 +15,8 @@ Next.js with `output: 'export'` and `basePath` configuration doesn't automatical
 
 ```typescript
 export const assetPath = (path: string): string => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
   return `${basePath}${cleanPath}`;
 };
 ```
@@ -24,23 +24,27 @@ export const assetPath = (path: string): string => {
 ### 2. Updated All Image References
 
 **Updated Components:**
+
 - `app/components/HeroSection.tsx` - Profile image
 - `app/components/GreenconSection.tsx` - All hackathon images (7 images)
 
 **Before:**
+
 ```tsx
 <Image src="/profile1.jpeg" alt="Profile" />
 ```
 
 **After:**
+
 ```tsx
 import { assetPath } from "../utils/paths";
-<Image src={assetPath("/profile1.jpeg")} alt="Profile" />
+<Image src={assetPath("/profile1.jpeg")} alt="Profile" />;
 ```
 
 ### 3. Verified Build Output
 
 All images now have correct paths in production HTML:
+
 ```
 ✅ /portfolio/profile1.jpeg
 ✅ /portfolio/hackathon/hack1.jpg
@@ -75,11 +79,13 @@ git push origin main
 ## How It Works
 
 ### Development (localhost:3000)
+
 - `basePath = ''`
 - Images load from: `/profile.jpg`
 - Works perfectly ✅
 
 ### Production (GitHub Pages)
+
 - `basePath = '/portfolio'`
 - Images load from: `/portfolio/profile.jpg`
 - Works perfectly ✅
@@ -102,6 +108,7 @@ Visit: `http://localhost:8000/portfolio/` (note the `/portfolio/` path!)
 ## Why This Matters
 
 GitHub Pages serves your site from a subdirectory:
+
 - ❌ `https://minhaj47.github.io/profile.jpg` → 404 Not Found
 - ✅ `https://minhaj47.github.io/portfolio/profile.jpg` → Works!
 

@@ -59,7 +59,9 @@ export default function GreenconSection() {
           <div className="flex justify-center mb-6">
             <div className="relative w-32 h-32 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src={assetPath("/hackathon/Greentech Apps Foundation_Greentech-Apps-Foundation-Icon_1.png")}
+                src={assetPath(
+                  "/hackathon/Greentech Apps Foundation_Greentech-Apps-Foundation-Icon_1.png",
+                )}
                 alt="Greentech Apps Foundation Logo"
                 fill
                 className="object-cover"

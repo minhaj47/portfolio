@@ -2,7 +2,8 @@
  * Get the base path for the application
  * This is used to handle GitHub Pages subdirectory deployment
  */
-export const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+export const basePath =
+  process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 /**
  * Get the full path for an asset
@@ -14,6 +15,6 @@ export const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '
  */
 export const assetPath = (path: string): string => {
   // Ensure path starts with /
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
   return `${basePath}${cleanPath}`;
 };
