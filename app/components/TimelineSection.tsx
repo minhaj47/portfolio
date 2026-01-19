@@ -15,7 +15,7 @@ export default function TimelineSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 mt-4 text-gray-900 dark:text-white">
+          <h2 className="text-3xl md:text-5xl font-bold mb-10 mt-5 text-gray-900 dark:text-white">
             Learning Journey
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-30">
@@ -52,9 +52,9 @@ export default function TimelineSection() {
                     item.isHackathon ? "ring-2 ring-yellow-400" : ""
                   }`}
                 >
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center justify-between mr-6 mb-4 gap-2">
                     <span
-                      className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white rounded-full text-xs font-bold`}
+                      className={`px-3 py-1 border border-blue-300 dark:border-blue-800 text-gray-900 dark:text-white rounded-full text-xs font-bold`}
                     >
                       {item.semester}
                     </span>

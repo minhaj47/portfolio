@@ -256,7 +256,7 @@ const categoryLabelPositions = [
 export default function SkillsSection() {
   return (
     <section
-      className="py-32 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
+      className="py-25 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
       id="skills"
     >
       <div className="max-w-7xl mx-auto">
@@ -267,10 +267,7 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <span className="px-4 py-2 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium inline-block mb-4">
-            🐝 Tech Stack Beehive
-          </span>
-          <h2 className="text-4xl  md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl  md:text-5xl font-bold text-gray-900 dark:text-white mb-9">
             Technical Skills
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

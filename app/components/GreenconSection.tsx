@@ -93,7 +93,7 @@ export default function GreenconSection() {
         </motion.div>
 
         {/* Achievement Card */}
-        <div className="bg-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 mb-12 border border-green-500/30">
+        <div className="bg-slate-700 dark:bg-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 mb-12 border border-green-500/30">
           {/* Preliminary Round Result */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-3 mb-4">

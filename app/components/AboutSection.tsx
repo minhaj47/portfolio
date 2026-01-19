@@ -5,7 +5,7 @@ import { GraduationCap, MapPin, Sparkles, Target } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-32 px-4 bg-gray-50 dark:bg-slate-800/50" id="about">
+    <section className="py-15 px-4 bg-gray-50 dark:bg-slate-800/50" id="about">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,10 +14,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium inline-block mb-4">
+          <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium inline-block mb-10">
             About Me
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-10">
             Building the Future with Code
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -73,7 +73,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 text-white"
+            className="rounded-3xl bg-gradient-to-br from-blue-950 to-purple-950 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 text-white"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-white/20 backdrop-blur-sm rounded-2xl">

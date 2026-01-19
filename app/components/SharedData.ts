@@ -585,7 +585,7 @@ export const skills: Record<string, SkillCategory> = {
 
 export const achievements: Achievement[] = [
   {
-    title: "1st Runner Up - GreenCon Hackathon 2025",
+    title: "1st Runner Up - GreenCon Hackathon",
     description: "Built crisis communication app with mesh networking",
     iconName: "Trophy",
   },
@@ -757,7 +757,6 @@ export const stats: Stat[] = [
 export const jsConcepts = [
   {
     title: "Execution Context & Call Stack",
-    icon: "🧠",
     description:
       "Deep understanding of how JS executes code - creation phase, execution phase, scope chain, and variable hoisting",
     example:
@@ -766,7 +765,6 @@ export const jsConcepts = [
   },
   {
     title: "Event Loop & Asynchronous JS",
-    icon: "🔄",
     description:
       "Master of the event loop, microtasks, macrotasks, and non-blocking code execution",
     example: "Real-time Socket.IO implementations in EduVerse & TicTacToe",
@@ -774,7 +772,6 @@ export const jsConcepts = [
   },
   {
     title: "Debouncing & Throttling",
-    icon: "⚡",
     description:
       "Performance optimization techniques to control function execution frequency",
     example:
@@ -783,7 +780,6 @@ export const jsConcepts = [
   },
   {
     title: "Closures & Scope",
-    icon: "🔒",
     description:
       "Leveraging closures for data privacy, function factories, and module patterns",
     example:
@@ -792,7 +788,6 @@ export const jsConcepts = [
   },
   {
     title: "Prototypes & Inheritance",
-    icon: "🧬",
     description:
       "Understanding prototypal inheritance, prototype chain, and object creation patterns",
     example:
@@ -801,7 +796,6 @@ export const jsConcepts = [
   },
   {
     title: "LRU Cache Implementation",
-    icon: "💾",
     description:
       "Built efficient caching mechanisms with Least Recently Used eviction policy",
     example:
@@ -810,7 +804,6 @@ export const jsConcepts = [
   },
   {
     title: "Task Scheduler & Queues",
-    icon: "📋",
     description:
       "Custom task scheduling with priority queues and job processing for background operations",
     example:

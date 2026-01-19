@@ -71,7 +71,7 @@ const HexagonIcon = ({
 export default function ContactSection() {
   return (
     <section
-      className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 overflow-hidden"
+      className="relative py-30 px-4 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 overflow-hidden"
       id="contact"
     >
       {/* Background decorative elements */}
@@ -88,7 +88,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl mb-6 bg-black dark:bg-white bg-clip-text dark:font-bold text-transparent">
+          <h2 className="text-4xl md:text-5xl mb-20 bg-black dark:bg-white bg-clip-text text-transparent">
             Let&apos;s Connect
           </h2>
         </motion.div>

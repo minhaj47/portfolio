@@ -65,26 +65,42 @@ export default function AchievementsSection() {
           </div>
 
           {/* Production Impact Stats */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 mb-8">
-            <h3 className="text-xl font-bold text-white mb-6 text-center">
+          <div className="border-2 border-blue-500 rounded-2xl shadow-xl p-8 mb-8">
+            <h3 className="text-2xl text-gray-900 dark:text-white mb-15 text-center">
               Production Impact
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">2-3K+</div>
-                <div className="text-white/70 text-sm">Total Users Served</div>
+                <div className="text-3xl text-gray-900 dark:text-white mb-1">
+                  2-3K+
+                </div>
+                <div className="text-gray-600 dark:text-white/70 text-sm">
+                  Total Users Served
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">100%</div>
-                <div className="text-white/70 text-sm">Event Success Rate</div>
+                <div className="text-3xl text-gray-900 dark:text-white mb-1">
+                  100%
+                </div>
+                <div className="text-gray-600 dark:text-white/70 text-sm">
+                  Event Success Rate
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">200+</div>
-                <div className="text-white/70 text-sm">APIs Developed</div>
+                <div className="text-3xl text-gray-900 dark:text-white mb-1">
+                  200+
+                </div>
+                <div className="text-gray-600 dark:text-white/70 text-sm">
+                  APIs Developed
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">5+</div>
-                <div className="text-white/70 text-sm">Live Applications</div>
+                <div className="text-3xl text-gray-900 dark:text-white mb-1">
+                  5+
+                </div>
+                <div className="text-gray-600 dark:text-white/70 text-sm">
+                  Live Applications
+                </div>
               </div>
             </div>
           </div>

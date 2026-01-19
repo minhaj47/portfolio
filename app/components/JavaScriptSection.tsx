@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, CheckCircle, Code } from "lucide-react";
+import { CheckCircle, Code } from "lucide-react";
 import { jsConcepts, performanceMetrics } from "./SharedData";
 
 // Honeycomb layout: 3 hexagons in first column, 4 in second column (offset)
@@ -38,8 +38,8 @@ export default function JavaScriptSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            JavaScript Deep Dive
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-7">
+            Deeper Understanding of JavaScript
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto italic">
             Beyond syntax — understanding how JavaScript works under the hood
@@ -192,7 +192,7 @@ export default function JavaScriptSection() {
         >
           {/* Container with background and padding */}
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10 max-w-6xl mx-auto border border-gray-200 dark:border-slate-700">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3 justify-center">
+            <h3 className="text-2xl md:text-3xl text-gray-900 dark:text-white mb-8 flex items-center gap-3 justify-center">
               Example Performance Impacts
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
@@ -255,33 +255,6 @@ export default function JavaScriptSection() {
                           ✓ {metric.improvement}
                         </div>
                       </div>
-
-                      {/* Visual Result */}
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="flex-1 text-center bg-red-50 dark:bg-red-900/20 rounded-lg py-2 px-3">
-                          <div className="text-lg font-bold text-red-600 dark:text-red-400">
-                            {metric.before.includes("ms")
-                              ? metric.before.replace("ms", "ms")
-                              : metric.before.split(" ")[0]}
-                          </div>
-                          <div className="text-[10px] text-gray-500 dark:text-gray-400 uppercase">
-                            Before
-                          </div>
-                        </div>
-
-                        <div className="text-xl text-green-500">→</div>
-
-                        <div className="flex-1 text-center bg-green-50 dark:bg-green-900/20 rounded-lg py-2 px-3">
-                          <div className="text-lg font-bold text-green-600 dark:text-green-400">
-                            {metric.after.includes("ms")
-                              ? metric.after.replace("ms", "")
-                              : metric.after.split(" ")[0]}
-                          </div>
-                          <div className="text-[10px] text-gray-500 dark:text-gray-400 uppercase">
-                            After
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -298,11 +271,6 @@ export default function JavaScriptSection() {
           viewport={{ once: true }}
           className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3 justify-center">
-            <Brain className="w-7 h-7 text-purple-500" />
-            JavaScript Philosophy
-          </h3>
-
           <div className="grid md:grid-cols-2 gap-8">
             {/* Focus Areas */}
             <div>
