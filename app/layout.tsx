@@ -17,7 +17,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
+  title: "Md. Minhajul Haque - Portfolio",
   description:
     "Full Stack Developer specializing in modern web technologies. Explore my projects, skills, and experience in building exceptional digital experiences.",
   keywords: [
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "typescript",
     "fullstack",
   ],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Md. Minhajul Haque" }],
   openGraph: {
-    title: "Your Name - Portfolio",
+    title: "Md. Minhajul Haque - Portfolio",
     description: "Full Stack Developer Portfolio",
     type: "website",
   },

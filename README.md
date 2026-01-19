@@ -113,23 +113,17 @@ Consider adding these sections to complete your portfolio:
 
 This project is configured to deploy automatically to GitHub Pages using GitHub Actions.
 
-**Quick Setup:**
+**📖 Quick Start:** See [QUICK-START.md](QUICK-START.md) for 5-minute deployment
 
-1. Push your code to GitHub:
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
+**📋 Full Guide:** See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions
 
-2. Enable GitHub Pages:
-   - Go to your repository on GitHub
-   - Navigate to **Settings → Pages**
-   - Under **Source**, select **GitHub Actions**
+**🖼️ Images not loading?** See [IMAGE-TROUBLESHOOTING.md](IMAGE-TROUBLESHOOTING.md)
 
-3. Your site will be automatically deployed at: `https://minhaj47.github.io/portfolio`
+**Quick Steps:**
 
-For detailed instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+1. Push your code to GitHub
+2. Go to Settings → Pages → Source → Select "GitHub Actions"
+3. Your site will be at: `https://minhaj47.github.io/portfolio`
 
 ### Other Deployment Options
 

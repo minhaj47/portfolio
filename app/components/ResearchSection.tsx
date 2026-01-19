@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Brain, Target } from "lucide-react";
 
 export default function ResearchSection() {
   return (
@@ -23,10 +22,7 @@ export default function ResearchSection() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Main Research */}
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 md:col-span-2">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
-                  <Brain className="w-5 h-5" />
-                </div>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Evaluating and Enhancing LLMs for Islamic Question Answering
                 </h3>
@@ -91,18 +87,15 @@ export default function ResearchSection() {
 
             {/* Secondary Research */}
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white">
-                  <BookOpen className="w-5 h-5" />
-                </div>
+              <div className="flex items-center gap-6 mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  NarrativeSense: Benchmarking Large Language Models for
+                  Socio-Political Identity Framing in Bengali News Articles{" "}
+                </h3>
                 <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-xs font-medium">
                   Ongoing
                 </span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                NarrativeSense: Benchmarking Large Language Models for
-                Socio-Political Identity Framing in Bengali News Articles{" "}
-              </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 A computational benchmark to detect identity-based framing in
                 Bengali news using expert-annotated data and state-of-the-art
@@ -127,17 +120,15 @@ export default function ResearchSection() {
 
             {/* Research Interest */}
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg text-white">
-                  <Target className="w-5 h-5" />
-                </div>
+              <div className="flex items-center gap-6 mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Detection and Refutation of Misleading Historical Narratives
+                </h3>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium">
                   Interest
                 </span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Detection and Refutation of Misleading Historical Narratives
-              </h3>
+
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 Developing NLP-based models to detect biased content and
                 generate refutations grounded in authentic Islamic sources.
