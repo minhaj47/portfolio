@@ -109,18 +109,36 @@ Consider adding these sections to complete your portfolio:
 
 ## 🚀 Deployment
 
-### Deploy on Vercel (Recommended)
+### Deploy on GitHub Pages (Configured)
 
-1. Push your code to GitHub
-2. Visit [Vercel](https://vercel.com/new)
-3. Import your repository
-4. Vercel will automatically detect Next.js and deploy
+This project is configured to deploy automatically to GitHub Pages using GitHub Actions.
+
+**Quick Setup:**
+
+1. Push your code to GitHub:
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. Enable GitHub Pages:
+   - Go to your repository on GitHub
+   - Navigate to **Settings → Pages**
+   - Under **Source**, select **GitHub Actions**
+
+3. Your site will be automatically deployed at: `https://minhaj47.github.io/portfolio`
+
+For detailed instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ### Other Deployment Options
 
+- **Vercel (Alternative)**: Visit [Vercel](https://vercel.com/new) and import your repository
 - **Netlify**: Connect your Git repository
 - **AWS Amplify**: Deploy with AWS infrastructure
 - **Digital Ocean**: Use App Platform for deployment
+
+> **Note**: For Vercel deployment, remove the `basePath` and `assetPrefix` from `next.config.ts`
 
 ## 📝 Available Scripts
 
