@@ -68,18 +68,22 @@ Before deploying to GitHub Pages, make sure you've completed these steps:
 ## 🔧 Common Issues
 
 **Images not loading?**
+
 - Ensure image paths are relative (e.g., `/profile.jpg`)
 - The basePath will be automatically prepended
 
 **CSS not working?**
+
 - Check that the build completed successfully
 - Verify GitHub Actions workflow ran without errors
 
 **404 errors?**
+
 - Confirm GitHub Pages source is set to "GitHub Actions"
 - Wait a few minutes for DNS propagation
 
 **Need to update content?**
+
 - Just push changes to main branch
 - GitHub Actions will automatically redeploy
 

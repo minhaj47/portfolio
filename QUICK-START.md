@@ -50,11 +50,13 @@ Go to: **Actions tab** → Watch for green checkmark ✓
 ## ✅ Image Loading Checklist
 
 ### Before Deployment
+
 - [x] Images are in `public/` folder
 - [x] Build works: `npm run build`
 - [x] Images found in `out/` folder
 
 ### After Deployment
+
 - [ ] GitHub Pages source = "GitHub Actions"
 - [ ] Action completed with ✓
 - [ ] Waited 2-3 minutes

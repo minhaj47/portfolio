@@ -4,16 +4,17 @@ import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { assetPath } from "../utils/paths";
 
 export default function GreenconSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const hackathonImages = [
-    { src: "/hackathon/hack1.jpg", alt: "Award Ceremony" },
-    { src: "/hackathon/hack2.jpg", alt: "Project Presentation" },
-    { src: "/hackathon/hack3.jpg", alt: "Mentoring & Supervision" },
-    { src: "/hackathon/hack4.jpg", alt: "Team Collaboration" },
-    { src: "/hackathon/hack5.JPG", alt: "Hackathon Participants" },
+    { src: assetPath("/hackathon/hack1.jpg"), alt: "Award Ceremony" },
+    { src: assetPath("/hackathon/hack2.jpg"), alt: "Project Presentation" },
+    { src: assetPath("/hackathon/hack3.jpg"), alt: "Mentoring & Supervision" },
+    { src: assetPath("/hackathon/hack4.jpg"), alt: "Team Collaboration" },
+    { src: assetPath("/hackathon/hack5.JPG"), alt: "Hackathon Participants" },
   ];
 
   const technologies = [
@@ -58,7 +59,7 @@ export default function GreenconSection() {
           <div className="flex justify-center mb-6">
             <div className="relative w-32 h-32 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/hackathon/Greentech Apps Foundation_Greentech-Apps-Foundation-Icon_1.png"
+                src={assetPath("/hackathon/Greentech Apps Foundation_Greentech-Apps-Foundation-Icon_1.png")}
                 alt="Greentech Apps Foundation Logo"
                 fill
                 className="object-cover"
@@ -313,7 +314,7 @@ export default function GreenconSection() {
             </div>
             <div className="relative h-64 md:h-full min-h-[300px]">
               <Image
-                src="/hackathon/Greentech Apps Foundation_1_3.png"
+                src={assetPath("/hackathon/Greentech Apps Foundation_1_3.png")}
                 alt="Greentech Apps Foundation"
                 fill
                 className="object-cover"

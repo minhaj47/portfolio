@@ -41,6 +41,7 @@ Once deployed, your portfolio will be available at:
 ### Next.js Configuration
 
 The `next.config.ts` has been configured with:
+
 - `output: 'export'` - Enables static HTML export
 - `images.unoptimized: true` - Required for static export
 - `basePath` and `assetPrefix` - Set to `/portfolio` for GitHub Pages subdirectory
@@ -48,6 +49,7 @@ The `next.config.ts` has been configured with:
 ### GitHub Actions Workflow
 
 The workflow (`.github/workflows/deploy.yml`) automatically:
+
 1. Checks out your code
 2. Sets up Node.js 20
 3. Installs dependencies with `npm ci`
@@ -72,6 +74,7 @@ This will create an `out` directory with your static site.
 **This is the most common issue!** See detailed solutions in [IMAGE-TROUBLESHOOTING.md](IMAGE-TROUBLESHOOTING.md)
 
 **Quick fixes:**
+
 1. Verify GitHub Pages source is set to "GitHub Actions" (not "Deploy from a branch")
 2. Wait 2-3 minutes after deployment for changes to appear
 3. Clear browser cache (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)
@@ -92,15 +95,11 @@ If images are not showing on GitHub Pages:
 - ✅ **Case-sensitive**: `hack5.JPG` vs `hack5.jpg` matters on GitHub Pages
 
 **Example correct usage:**
+
 ```tsx
 import Image from "next/image";
 
-<Image
-  src="/profile.jpg"
-  alt="Profile"
-  width={200}
-  height={200}
-/>
+<Image src="/profile.jpg" alt="Profile" width={200} height={200} />;
 ```
 
 ### Other Issues

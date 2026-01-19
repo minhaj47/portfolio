@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
+import { assetPath } from "../utils/paths";
 
 // Surrounding hexagon positions - arranged in a loose honeycomb pattern around the center
 const surroundingHexPositions = [
@@ -279,7 +280,7 @@ export default function HeroSection() {
                 >
                   <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl shadow-blue-500/30 border-4 border-white dark:border-slate-700">
                     <Image
-                      src="/profile1.jpeg"
+                      src={assetPath("/profile1.jpeg")}
                       alt="Md. Minhajul Haque"
                       width={200}
                       height={200}

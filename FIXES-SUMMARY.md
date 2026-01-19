@@ -9,7 +9,7 @@ I've analyzed and fixed your image loading configuration for GitHub Pages deploy
 Your build is **working correctly**! I tested it and confirmed:
 
 - ✅ `profile.jpg` (121KB) - Found in build output
-- ✅ `profile1.jpeg` (113KB) - Found in build output  
+- ✅ `profile1.jpeg` (113KB) - Found in build output
 - ✅ `hackathon/` folder - All 8 images present (~45MB total)
 - ✅ Static export configured correctly
 - ✅ BasePath set to `/portfolio`
@@ -18,11 +18,13 @@ Your build is **working correctly**! I tested it and confirmed:
 ## 🔧 Configuration Updates
 
 ### 1. **next.config.ts** - Updated ✅
+
 - Added `trailingSlash: true` for better URL handling
 - Properly configured basePath and assetPrefix
 - Static export with unoptimized images
 
 ### 2. **GitHub Actions Workflow** - Enhanced ✅
+
 - Added `NODE_ENV=production` environment variable
 - Automatically creates `.nojekyll` file in output
 - Proper artifact upload configuration
@@ -86,12 +88,14 @@ The most common reason images don't load on GitHub Pages:
 ### Issue: GitHub Pages Source Setting
 
 If "Source" is set to "Deploy from a branch" instead of "GitHub Actions":
+
 - ❌ GitHub looks for files in the repository root
 - ❌ Doesn't run the build process
 - ❌ Images aren't processed correctly
 - ❌ BasePath isn't applied
 
 ### Solution:
+
 ✅ Set Source to "GitHub Actions"
 ✅ GitHub runs your workflow
 ✅ Builds the Next.js app properly

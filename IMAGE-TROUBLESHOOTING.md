@@ -3,6 +3,7 @@
 ## ✅ Your Build is Working Correctly!
 
 I've verified that your build includes all images:
+
 - ✅ `profile.jpg` - 121KB
 - ✅ `profile1.jpeg` - 113KB
 - ✅ `hackathon/` folder with 8 images (total ~45MB)
@@ -12,10 +13,13 @@ I've verified that your build includes all images:
 ### 1. **Build Configuration** (Already Fixed ✅)
 
 Your `next.config.ts` is correctly configured:
+
 ```typescript
-output: 'export'              // ✅ Static export enabled
-images: { unoptimized: true } // ✅ Required for static export
-basePath: '/portfolio'        // ✅ Matches your repo name
+output: "export"; // ✅ Static export enabled
+images: {
+  unoptimized: true;
+} // ✅ Required for static export
+basePath: "/portfolio"; // ✅ Matches your repo name
 ```
 
 ### 2. **Image Paths** (Verify These)
@@ -23,12 +27,14 @@ basePath: '/portfolio'        // ✅ Matches your repo name
 Make sure all images in your components use paths starting with `/`:
 
 **✅ CORRECT:**
+
 ```tsx
 <Image src="/profile.jpg" alt="Profile" width={200} height={200} />
 <Image src="/hackathon/hack1.jpg" alt="Hackathon" width={400} height={300} />
 ```
 
 **❌ WRONG:**
+
 ```tsx
 <Image src="profile.jpg" alt="Profile" />        // Missing leading slash
 <Image src="./profile.jpg" alt="Profile" />      // Don't use relative paths
@@ -72,6 +78,7 @@ Then open: `http://localhost:8000/portfolio/`
 #### Issue: Images show locally but not on GitHub Pages
 
 **Solution:**
+
 - Clear browser cache (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)
 - Check browser console (F12) for 404 errors
 - Verify the exact path being requested
@@ -79,11 +86,13 @@ Then open: `http://localhost:8000/portfolio/`
 #### Issue: 404 errors for images
 
 **Expected URL:**
+
 ```
 https://minhaj47.github.io/portfolio/profile.jpg  ✅
 ```
 
 **Wrong URLs:**
+
 ```
 https://minhaj47.github.io/profile.jpg            ❌ Missing basePath
 /profile.jpg                                      ❌ Absolute from root
@@ -92,6 +101,7 @@ https://minhaj47.github.io/profile.jpg            ❌ Missing basePath
 #### Issue: Only some images load
 
 **Check:**
+
 - File names are case-sensitive (`hack5.JPG` vs `hack5.jpg`)
 - All images are in the `public/` directory
 - No special characters in filenames
@@ -170,6 +180,7 @@ npm run build && cd out && python3 -m http.server 8000
 ## Next.js Image Component Behavior
 
 With `output: 'export'` and `unoptimized: true`:
+
 - Images are copied as-is to the `out/` directory
 - The `basePath` is automatically prepended
 - No image optimization occurs (images keep original size)
