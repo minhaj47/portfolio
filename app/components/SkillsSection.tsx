@@ -353,7 +353,7 @@ export default function SkillsSection() {
             })}
 
             {/* Mobile Category Legend */}
-            <div className="absolute -top-16 left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-2 md:hidden">
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-2 lg:hidden max-w-[90%]">
               {Object.entries(categoryColors).map(([key, cat]) => (
                 <div
                   key={key}
