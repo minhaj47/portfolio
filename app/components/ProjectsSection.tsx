@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Cpu, ExternalLink, Github, Play, Trophy, X, Zap } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Project, projects } from "./SharedData";
 
@@ -88,19 +89,45 @@ function ProjectCard({ project, fadeInUp, onPreview }: ProjectCardProps) {
       className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
       onClick={onPreview}
     >
-      {/* Project Header */}
-      <div className={`h-32 bg-gradient-to-r ${project.gradient} p-6 relative`}>
-        {project.isHackathon && (
-          <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-            <Trophy className="w-3 h-3" /> Winner
+      {/* Project Image or Header */}
+      {project.image ? (
+        <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {project.isHackathon && (
+            <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 z-10">
+              <Trophy className="w-3 h-3" /> Winner
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute bottom-4 left-4 right-4">
+            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            <p className="text-white/90 text-sm">{project.subtitle}</p>
           </div>
-        )}
-        <h3 className="text-xl font-bold text-white">{project.title}</h3>
-        <p className="text-white/80 text-sm">{project.subtitle}</p>
-        <span className="absolute bottom-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs">
-          {project.semester}
-        </span>
-      </div>
+          <span className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs">
+            {project.semester}
+          </span>
+        </div>
+      ) : (
+        <div
+          className={`h-32 bg-gradient-to-r ${project.gradient} p-6 relative`}
+        >
+          {project.isHackathon && (
+            <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+              <Trophy className="w-3 h-3" /> Winner
+            </div>
+          )}
+          <h3 className="text-xl font-bold text-white">{project.title}</h3>
+          <p className="text-white/80 text-sm">{project.subtitle}</p>
+          <span className="absolute bottom-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs">
+            {project.semester}
+          </span>
+        </div>
+      )}
 
       {/* Project Content */}
       <div className="p-6">
@@ -155,7 +182,7 @@ function ProjectCard({ project, fadeInUp, onPreview }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-xs font-medium hover:shadow-md transition-all"
+              className="flex items-center gap-1 px-3 py-1.5 border-1 border-blue-600 text-gray-600 dark:text-white rounded-lg text-xs font-medium hover:shadow-md transition-all"
               onClick={(e) => e.stopPropagation()}
             >
               <ExternalLink className="w-3 h-3" /> Live
@@ -177,7 +204,7 @@ function ProjectCard({ project, fadeInUp, onPreview }: ProjectCardProps) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-1.5 bg-red-500 text-white rounded-lg text-xs font-medium hover:shadow-md transition-all"
+              className="flex items-center gap-1 px-3 py-1.5 border-2 border-red-500 text-red-400 rounded-lg text-xs font-medium hover:shadow-md transition-all"
               onClick={(e) => e.stopPropagation()}
             >
               <Play className="w-3 h-3" /> Demo
@@ -188,7 +215,7 @@ function ProjectCard({ project, fadeInUp, onPreview }: ProjectCardProps) {
               href={project.mobileAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-1.5 bg-green-500 text-white rounded-lg text-xs font-medium hover:shadow-md transition-all"
+              className="flex items-center gap-1 px-3 py-1.5 border-2 border-green-500 text-gray-600 dark:text-white rounded-lg text-xs font-medium hover:shadow-md transition-all"
               onClick={(e) => e.stopPropagation()}
             >
               <Cpu className="w-3 h-3" /> App
@@ -223,33 +250,66 @@ function ProjectPreview({ project, onClose }: ProjectPreviewProps) {
         className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header with gradient */}
-        <div className={`bg-gradient-to-r ${project.gradient} p-6 relative`}>
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full text-white transition-all"
-            aria-label="Close preview"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {project.isHackathon && (
-            <div className="inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold mb-2">
-              <Trophy className="w-4 h-4" /> Hackathon Winner
+        {/* Header with gradient or image */}
+        {project.image ? (
+          <div className="relative h-64 w-full overflow-hidden">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full text-white transition-all z-10"
+              aria-label="Close preview"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            {project.isHackathon && (
+              <div className="absolute top-4 left-4 inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
+                <Trophy className="w-4 h-4" /> Hackathon Winner
+              </div>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <h2 className="text-3xl font-bold text-white mb-2">
+                {project.title}
+              </h2>
+              <p className="text-white/90 text-lg">{project.subtitle}</p>
+              <span className="inline-block mt-2 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm">
+                {project.semester}
+              </span>
             </div>
-          )}
+          </div>
+        ) : (
+          <div className={`bg-gradient-to-r ${project.gradient} p-6 relative`}>
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 p-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full text-white transition-all"
+              aria-label="Close preview"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
-          <h2 className="text-3xl font-bold text-white mb-2">
-            {project.title}
-          </h2>
-          <p className="text-white/90 text-lg">{project.subtitle}</p>
-          <span className="inline-block mt-2 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm">
-            {project.semester}
-          </span>
-        </div>
+            {project.isHackathon && (
+              <div className="inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold mb-2">
+                <Trophy className="w-4 h-4" /> Hackathon Winner
+              </div>
+            )}
+
+            <h2 className="text-3xl font-bold text-white mb-2">
+              {project.title}
+            </h2>
+            <p className="text-white/90 text-lg">{project.subtitle}</p>
+            <span className="inline-block mt-2 px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm">
+              {project.semester}
+            </span>
+          </div>
+        )}
 
         {/* Scrollable Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+        <div className="p-6 pb-8 overflow-y-auto max-h-[calc(90vh-16rem)]">
           {/* Description */}
           <div className="mb-6">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -304,7 +364,7 @@ function ProjectPreview({ project, onClose }: ProjectPreviewProps) {
           </div>
 
           {/* Availability Links */}
-          <div className="mb-4">
+          <div className="mb-6">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               Availability
             </h3>
@@ -314,7 +374,7 @@ function ProjectPreview({ project, onClose }: ProjectPreviewProps) {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl"
+                  className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-red-500 hover:border-red-600 text-red-500 rounded-xl font-medium transition-all shadow-lg hover:shadow-xl"
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
@@ -338,10 +398,10 @@ function ProjectPreview({ project, onClose }: ProjectPreviewProps) {
                   href={project.mobileAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl"
+                  className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-green-500 hover:border-2 border-green-600 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-xl"
                 >
                   <Cpu className="w-5 h-5" />
-                  <span>Download App</span>
+                  <span>App</span>
                 </a>
               )}
 

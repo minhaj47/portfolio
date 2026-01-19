@@ -28,6 +28,7 @@ export interface Project {
   gradient: string;
   impact: string;
   isHackathon?: boolean;
+  image?: string;
 }
 
 export interface Achievement {
@@ -315,8 +316,9 @@ export const projects: Project[] = [
     demoUrl:
       "https://www.linkedin.com/posts/minhaj47_tickabreasyabrcheckabreasy-activity-7356356844602171392-4ixD",
     mobileAppUrl: "https://github.com/minhaj47/tick_easy_check_easy_2_0",
-    gradient: "from-blue-600 to-cyan-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "2-3K+ users, 100% success rate",
+    image: "/tickeasy.png",
   },
   {
     id: 2,
@@ -346,8 +348,9 @@ export const projects: Project[] = [
     semester: "6th Semester",
     category: "production",
     githubUrl: "https://github.com/md-abdullah-92/Eduverse",
-    gradient: "from-purple-600 to-pink-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "~100K lines of code, 150+ APIs",
+    image: "/eduverse.png",
   },
   {
     id: 3,
@@ -366,8 +369,9 @@ export const projects: Project[] = [
     category: "ai",
     demoUrl:
       "https://www.linkedin.com/posts/minhaj47_rag-research-nlp-ugcPost-7393984168889847808-VISV",
-    gradient: "from-indigo-500 to-purple-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "Research productivity tool",
+    image: "/research.png",
   },
   {
     id: 4,
@@ -386,8 +390,9 @@ export const projects: Project[] = [
     demoUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:7379563963539271680/",
     liveUrl: "https://frontend-dusky-nine-35.vercel.app/",
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "Live AI orchestrator",
+    image: "/eventure.png",
   },
   {
     id: 5,
@@ -407,9 +412,10 @@ export const projects: Project[] = [
     semester: "Hackathon",
     category: "hackathon",
     githubUrl: "https://github.com/minhaj47/crisis_communication_app_flutter",
-    gradient: "from-amber-500 to-red-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "1st Runner Up - GreenCon 2025",
     isHackathon: true,
+    image: "/crisis.png",
   },
   {
     id: 6,
@@ -432,8 +438,9 @@ export const projects: Project[] = [
       "https://github.com/minhaj47/ikss_blood_bot_n8n_javaScript_sheet_2.0",
     demoUrl:
       "https://www.linkedin.com/posts/minhaj47_automation-aiagents-n8n-activity-7368266477197488128-hCHe",
-    gradient: "from-red-500 to-orange-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "Live automation for university community",
+    image: "/bloodbot.png",
   },
   {
     id: 7,
@@ -463,8 +470,9 @@ export const projects: Project[] = [
     category: "production",
     liveUrl: "https://ikss-website.vercel.app/",
     githubUrl: "https://github.com/minhaj47/IKSS-website",
-    gradient: "from-emerald-600 to-teal-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "1000+ students reached, multiple events",
+    image: "/ikss.png",
   },
   {
     id: 8,
@@ -483,8 +491,9 @@ export const projects: Project[] = [
     semester: "5th Semester",
     category: "learning",
     githubUrl: "https://github.com/minhaj47/e-commerce_flutter_nodejs",
-    gradient: "from-yellow-500 to-orange-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "Learning project - Best practices",
+    image: "/amazon.png",
   },
   {
     id: 9,
@@ -512,8 +521,9 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/minhaj47/Doctors_Appointment",
     demoUrl:
       "https://www.linkedin.com/posts/minhaj47_last-year-i-developed-my-first-fully-functional-activity-7210659851637506049-cDad",
-    gradient: "from-cyan-500 to-blue-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "First large-scale mobile project",
+    image: "/doctors.png",
   },
   {
     id: 10,
@@ -533,8 +543,9 @@ export const projects: Project[] = [
     semester: "5th Semester",
     category: "learning",
     githubUrl: "https://github.com/minhaj47/tictactoe_flutter_multiplayer_game",
-    gradient: "from-pink-500 to-rose-500",
+    gradient: "from-slate-700 to-slate-900",
     impact: "Socket.IO learning project",
+    image: "/tictactoe.jpg",
   },
 ];
 
