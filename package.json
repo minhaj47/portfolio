@@ -9,8 +9,7 @@
     "lint": "eslint",
     "export": "next build && next export",
     "test:build": "bash test-build.sh",
-    "serve": "cd out && python3 -m http.server 8000",
-    "optimize:images": "node optimize-images.js"
+    "serve": "cd out && python3 -m http.server 8000"
   },
   "dependencies": {
     "framer-motion": "^12.26.2",

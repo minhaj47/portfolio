@@ -64,11 +64,6 @@ export default function GreenconSection() {
                 )}
                 alt="Greentech Apps Foundation Logo"
                 fill
-                sizes="128px"
-                quality={85}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                 className="object-cover"
               />
             </div>
@@ -239,11 +234,6 @@ export default function GreenconSection() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                  quality={70}
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -268,9 +258,6 @@ export default function GreenconSection() {
                 src={selectedImage}
                 alt="Selected hackathon image"
                 fill
-                sizes="(max-width: 768px) 100vw, 1200px"
-                quality={85}
-                priority
                 className="object-contain"
               />
               <button

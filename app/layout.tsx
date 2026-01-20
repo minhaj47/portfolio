@@ -46,37 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth dark" suppressHydrationWarning>
-      <head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              html, body {
-                background-color: #0a0a0a !important;
-                color: #ededed;
-              }
-            `,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme') || 'dark';
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="en" className="scroll-smooth">
       <body className={`${ubuntu.variable} ${firaCode.variable} antialiased`}>
         <ThemeProvider>
           <Navigation />
