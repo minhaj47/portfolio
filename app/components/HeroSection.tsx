@@ -284,8 +284,11 @@ export default function HeroSection() {
                       alt="Md. Minhajul Haque"
                       width={200}
                       height={200}
-                      className="w-full h-full object-cover scale-95"
+                      quality={90}
                       priority
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+                      className="w-full h-full object-cover scale-95"
                     />
                   </div>
                 </motion.div>

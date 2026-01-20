@@ -96,6 +96,11 @@ function ProjectCard({ project, fadeInUp, onPreview }: ProjectCardProps) {
             src={project.image}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={75}
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
             className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
           {project.isHackathon && (
@@ -257,6 +262,11 @@ function ProjectPreview({ project, onClose }: ProjectPreviewProps) {
               src={project.image}
               alt={project.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px"
+              quality={85}
+              priority={false}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
               className="object-cover"
             />
             <button

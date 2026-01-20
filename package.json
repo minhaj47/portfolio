@@ -9,7 +9,8 @@
     "lint": "eslint",
     "export": "next build && next export",
     "test:build": "bash test-build.sh",
-    "serve": "cd out && python3 -m http.server 8000"
+    "serve": "cd out && python3 -m http.server 8000",
+    "optimize:images": "node optimize-images.js"
   },
   "dependencies": {
     "framer-motion": "^12.26.2",
@@ -26,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.3",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
